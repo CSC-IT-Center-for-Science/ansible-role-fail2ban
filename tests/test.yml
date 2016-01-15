@@ -15,5 +15,12 @@
           logpath: '/var/log/secure'
           maxretry: '6'
 
+# on docker there's no rsyslog and no /var/log/secure
+   pre_tasks:
+     - name: test only - make sure /var/log directory exists
+       file: path=/var/log state=directory
+     - name: test only - touch /var/log/secure logfile
+       file: path=/var/log/secure state=touch
+
    roles:
      - ansible-role-fail2ban
