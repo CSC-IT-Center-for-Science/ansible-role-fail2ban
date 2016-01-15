@@ -2,5 +2,18 @@
 
  - hosts: localhost
    remote_user: root
+   vars:
+    - fail2ban_jails:
+        sshd:
+          enabled: 'true'
+          port: 'ssh'
+          logpath: '/var/log/secure'
+          maxretry: '6'
+        sshd-ddos:
+          enabled: 'true'
+          port: 'ssh'
+          logpath: '/var/log/secure'
+          maxretry: '6'
+
    roles:
      - ansible-role-fail2ban
