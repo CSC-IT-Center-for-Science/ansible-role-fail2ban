@@ -6,6 +6,7 @@
   delegate_to: localhost
   sudo: False
   changed_when: False
+  always_run: True
 
 - name: copy configured filters
   copy:
