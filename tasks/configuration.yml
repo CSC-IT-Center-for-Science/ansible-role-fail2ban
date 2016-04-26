@@ -4,7 +4,7 @@
   shell: 'ls {{ role_path }}/files/filters | sed s/.conf$//'
   register: fail2ban_local_filters
   delegate_to: localhost
-  sudo: False
+  become: False
   changed_when: False
   always_run: True
 

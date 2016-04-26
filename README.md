@@ -38,7 +38,7 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - { role: MichaelRigart.fail2ban, sudo: Yes }
+     - { role: MichaelRigart.fail2ban, become: Yes }
 ```
 
 License
