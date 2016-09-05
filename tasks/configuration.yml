@@ -35,7 +35,7 @@
   changed_when: False
 
 - debug:
-    var: fail2ban_version
+    var: fail2ban_version verbosity=1
   changed_when: False
 
 - name: set custom jails
