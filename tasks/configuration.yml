@@ -6,7 +6,7 @@
   delegate_to: localhost
   become: False
   changed_when: False
-  check_mode: yes
+  check_mode: no
 
 - name: copy configured filters
   copy:
