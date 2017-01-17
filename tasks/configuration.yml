@@ -29,7 +29,8 @@
     mode: 0644
   notify: restart_fail2ban
 
-- shell: fail2ban-client --v
+- name: command fail2ban-client --v to find out which fail2ban version we have installed
+  command: fail2ban-client --v
   register: fail2ban_version
   ignore_errors: True
   changed_when: False
